@@ -39,9 +39,9 @@ utility.getContact = (id) => {
 }
 
 utility.deleteContact = (id) => {
-    const index = contacts.findIndex(item => item.id === id)
+    const index = contacts.findIndex(item => item.id === id);
     if (index === -1) return false;
-    const newContacts = contacts.filter(item => item.id !== id);
+    contacts.splice(index, 1)
     writeData(newContacts);
     return true;
 }
