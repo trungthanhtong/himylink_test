@@ -20,7 +20,7 @@ utility.getContacts = () => contacts;
 utility.addContact = (contact) => {
     const id = Date.now().toString();
     contacts.push({id, ...contact});
-    writeData(contacts);
+    // writeData(contacts);
     return true;
 }
 
@@ -28,7 +28,7 @@ utility.editContact = (id, contact) => {
     const index = contacts.findIndex(item => item.id === id)
     if (index === -1) return false;
     contacts[index] = {id, ...contact};
-    writeData(contacts);
+    // writeData(contacts);
     return true;
 }
 
@@ -41,8 +41,7 @@ utility.getContact = (id) => {
 utility.deleteContact = (id) => {
     const index = contacts.findIndex(item => item.id === id);
     if (index === -1) return false;
-    contacts.splice(index, 1)
-    writeData(newContacts);
+    contacts.splice(index, 1);
     return true;
 }
 
