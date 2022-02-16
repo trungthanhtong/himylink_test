@@ -6,7 +6,11 @@
   "license": "MIT",
 
   "scripts": {
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "yarn run shell",
+    "deploy": "firebase deploy --only functions"
   },
 
   "dependencies": {
